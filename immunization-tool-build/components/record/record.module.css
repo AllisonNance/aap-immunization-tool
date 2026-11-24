@@ -1,0 +1,365 @@
+/* Recording screens (4a, 4, 4d) — grayscale wireframe, mobile first. */
+.screen {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding-bottom: var(--space-4); /* the logo footer leaves room for the fixed action bar */
+}
+.screen h1 {
+  margin: 0;
+}
+.h2 {
+  margin: 0 0 var(--space-2);
+  font-size: var(--text-md);
+}
+.sub {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+.headRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+.label {
+  font-weight: 700;
+}
+.hint {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+.input,
+.textarea {
+  min-height: var(--touch-target);
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+}
+.textarea {
+  min-height: 88px;
+  resize: vertical;
+}
+.input[aria-invalid='true'] {
+  border: 2px solid var(--gray-900);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  width: 100%;
+  min-height: var(--touch-target);
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+.row:hover {
+  background: var(--color-surface);
+}
+/* The vaccine's name on 4a opened for one vaccine: a heading row, not a button. */
+.staticRow {
+  cursor: default;
+}
+.rowText {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.rowTitle {
+  font-weight: 700;
+}
+.rowSub {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+.chevron {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  transition: transform var(--motion-fast);
+}
+.chevronOpen {
+  transform: rotate(90deg);
+}
+.pickedCard {
+  border: 2px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+.pickedCard .row {
+  border: 0;
+  background: transparent;
+}
+.dosePicker {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0 var(--space-3) var(--space-3);
+  border: 0;
+}
+.doseOptions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+.doseOption {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--touch-target);
+  padding: 0 var(--space-2);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+  cursor: pointer;
+}
+.doseOption > span:first-of-type {
+  flex: 1;
+}
+.doseOption input,
+.radioRow input,
+.check input {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  accent-color: var(--gray-900);
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-md);
+}
+.empty p {
+  margin: 0;
+}
+.textLink {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--touch-target);
+  font-weight: 600;
+}
+
+/* Dose Edit */
+.statusGroup {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.statusGroup legend {
+  margin-bottom: var(--space-2);
+  padding: 0;
+}
+.radioRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: var(--touch-target);
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+  cursor: pointer;
+}
+.radioRow + .radioRow {
+  margin-top: var(--space-2);
+}
+.radioRow:has(input:checked) {
+  border-width: 2px;
+  background: var(--color-surface);
+  font-weight: 700;
+}
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border-left: 4px solid var(--color-border-strong);
+  background: var(--color-surface);
+  border-radius: var(--radius-sm);
+}
+.panel p,
+.panel ul {
+  margin: 0;
+}
+.panel ul {
+  padding-left: var(--space-5);
+}
+.check {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: var(--touch-target);
+  cursor: pointer;
+}
+.error,
+.warning {
+  display: flex;
+  gap: var(--space-2);
+  align-items: flex-start;
+  margin: 0;
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+.warning {
+  font-weight: 400;
+}
+.error svg,
+.warning svg {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+}
+.formError {
+  margin: 0;
+  padding: var(--space-3);
+  border: 2px solid var(--gray-900);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+}
+.helper {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.confirmBox {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  border: 2px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+}
+.confirmBox p {
+  margin: 0;
+  font-weight: 600;
+}
+.dangerLink {
+  min-width: var(--touch-target);
+  align-self: flex-start;
+  min-height: var(--touch-target);
+  padding: 0;
+  border: 0;
+  background: none;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Bottom action bar (forms have no tab bar). */
+.actions {
+  position: fixed;
+  inset: auto 0 0 0;
+  z-index: 10;
+  padding: var(--space-3) var(--space-4) calc(var(--space-3) + var(--safe-bottom));
+  background: var(--color-bg);
+  border-top: 1px solid var(--color-border-strong);
+}
+.actionsInner {
+  display: flex;
+  gap: var(--space-2);
+  max-width: var(--content-max);
+  margin: 0 auto;
+}
+.actionsInner > * {
+  flex: 1;
+}
+
+/* Add to record (4a) is a page: the tab bar's spacing applies, not a fixed action bar. */
+.pageScreen {
+  gap: var(--space-6); /* 4a is a page: main-screen spacing between its sections */
+  padding-bottom: 0; /* the logo footer leaves room for the action bar */
+}
+/* Action bar fixed to the bottom (4a has no tab bar), over the page content. */
+.addBar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 11;
+  padding: var(--space-3) var(--space-4) calc(var(--space-3) + var(--safe-bottom));
+  background: var(--color-bg);
+  border-top: 1px solid var(--color-border-strong);
+  box-shadow: 0 -2px 8px var(--shadow-color);
+}
+.addBar .actionsInner > * {
+  flex: 1 1 auto;
+  white-space: nowrap;
+}
+/* Dose Edit (4): which child, as a chip above the vaccine name (no editing banner). */
+.childChip {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 0 var(--space-2);
+  padding: var(--space-1) var(--space-3);
+  border: 2px solid var(--gray-900);
+  border-radius: var(--radius-pill);
+  background: var(--gray-100);
+  font-size: var(--text-sm);
+  font-weight: 700;
+}
+/* Title with Scan a record aligned right on the same line. */
+.titleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-3);
+}
+
+/* 4a: "Can't find what you're looking for?" with a light link row (text left, chevron right). */
+.customPrompt {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+.customPrompt .h2 {
+  margin: 0;
+}
+.linkRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  min-height: var(--touch-target);
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-size: var(--text-sm); /* smaller than the section title above it, so it doesn't compete */
+  text-decoration: none;
+}
+.linkRow:hover span {
+  text-decoration: underline;
+}
+.linkRowChevron {
+  flex: none;
+  width: 16px;
+  height: 16px;
+}

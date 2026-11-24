@@ -1,0 +1,764 @@
+{
+  "sample": true,
+  "howToUse": "Ages are relative so fixtures never go stale. When seeding the mock API, set dateOfBirth = today − ageToday (− plusDays), and each dose's dateGiven = dateOfBirth + ageGiven. A dose with no ageGiven has no date (e.g. notSure).",
+  "accounts": [
+    {
+      "key": "demo-family",
+      "description": "Fully set up, 4 children, one per key scenario. Default login in dev.",
+      "locale": "en",
+      "agreementAccepted": true,
+      "onboardingComplete": true,
+      "children": [
+        "maya",
+        "leo",
+        "ava",
+        "sofia"
+      ],
+      "reminders": {
+        "sms": {
+          "enabled": true,
+          "phone": "(312) 555-0199"
+        },
+        "email": {
+          "enabled": false
+        },
+        "leadTimeDays": 14,
+        "perChild": {
+          "maya": true,
+          "leo": true,
+          "ava": true,
+          "sofia": true
+        }
+      }
+    },
+    {
+      "key": "new-family",
+      "description": "First visit. My Account has 3 children (Maya, Ava, Sofía) to import in Add Children; Leo can be added by hand. Tests onboarding and resume.",
+      "locale": "en",
+      "agreementAccepted": false,
+      "onboardingComplete": false,
+      "myAccountChildren": [
+        "maya",
+        "ava",
+        "sofia"
+      ],
+      "children": []
+    },
+    {
+      "key": "spanish-family",
+      "description": "Same 4 children as demo-family with locale 'es', to review the Spanish UI.",
+      "locale": "es",
+      "agreementAccepted": true,
+      "onboardingComplete": true,
+      "children": [
+        "maya",
+        "leo",
+        "ava",
+        "sofia"
+      ]
+    },
+    {
+      "key": "one-child",
+      "description": "Set up with a single child (Maya). Tests the one-child layout: the child selector has nothing to switch to and Add to record skips picking a child.",
+      "locale": "en",
+      "agreementAccepted": true,
+      "onboardingComplete": true,
+      "children": [
+        "maya"
+      ]
+    }
+  ],
+  "children": [
+    {
+      "key": "maya",
+      "name": "Maya",
+      "ageToday": {
+        "value": 6,
+        "unit": "months",
+        "plusDays": 5
+      },
+      "source": "myAccount",
+      "scenario": "Routine: 6-month-old on schedule. 6-month doses are Due now; nothing overdue.",
+      "pediatrician": {
+        "name": "Dr. Priya Shah",
+        "practice": "Lakeview Pediatrics",
+        "phone": "(312) 555-0142"
+      },
+      "doses": [
+        {
+          "vaccineId": "hepb",
+          "doseNumber": 1,
+          "status": "received",
+          "ageGiven": {
+            "value": 0,
+            "unit": "days"
+          }
+        },
+        {
+          "vaccineId": "hepb",
+          "doseNumber": 2,
+          "status": "received",
+          "ageGiven": {
+            "value": 1,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "rotavirus",
+          "doseNumber": 1,
+          "status": "received",
+          "ageGiven": {
+            "value": 2,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "dtap",
+          "doseNumber": 1,
+          "status": "received",
+          "ageGiven": {
+            "value": 2,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "hib",
+          "doseNumber": 1,
+          "status": "received",
+          "ageGiven": {
+            "value": 2,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "pcv",
+          "doseNumber": 1,
+          "status": "received",
+          "ageGiven": {
+            "value": 2,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "ipv",
+          "doseNumber": 1,
+          "status": "received",
+          "ageGiven": {
+            "value": 2,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "rotavirus",
+          "doseNumber": 2,
+          "status": "received",
+          "ageGiven": {
+            "value": 4,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "dtap",
+          "doseNumber": 2,
+          "status": "received",
+          "ageGiven": {
+            "value": 4,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "hib",
+          "doseNumber": 2,
+          "status": "received",
+          "ageGiven": {
+            "value": 4,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "pcv",
+          "doseNumber": 2,
+          "status": "received",
+          "ageGiven": {
+            "value": 4,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "ipv",
+          "doseNumber": 2,
+          "status": "received",
+          "ageGiven": {
+            "value": 4,
+            "unit": "months"
+          }
+        }
+      ],
+      "questions": [
+        {
+          "text": "Can she get the flu shot at the 6-month visit too?",
+          "vaccineId": "influenza",
+          "origin": "manual",
+          "textEs": "¿Le pueden poner también la vacuna contra la influenza en la visita de los 6 meses?"
+        },
+        {
+          "text": "Should we bring her vaccine card to every visit?",
+          "textEs": "¿Debemos llevar su cartilla de vacunación a cada consulta?",
+          "origin": "manual",
+          "resolved": true,
+          "answer": "Yes. Bring it so the office can add each new dose.",
+          "answerEs": "Sí. Llévela para que el consultorio anote cada dosis nueva."
+        }
+      ],
+      "nextAppointment": {
+        "daysFromToday": 9
+      }
+    },
+    {
+      "key": "leo",
+      "name": "Leo",
+      "ageToday": {
+        "value": 5,
+        "unit": "years",
+        "plusDays": 40
+      },
+      "source": "manual",
+      "scenario": "New user: 5-year-old with no history entered. Earlier doses read 'Not entered'; 4–6 year doses are Due now; School and childcare card shows. 'Add past vaccines' and 'Complete profile' cards show.",
+      "pediatrician": null,
+      "doses": [],
+      "questions": []
+    },
+    {
+      "key": "ava",
+      "name": "Ava",
+      "ageToday": {
+        "value": 20,
+        "unit": "months",
+        "plusDays": 3
+      },
+      "source": "myAccount",
+      "scenario": "Behind: history entered through 12 months. Hib and PCV boosters (12–15 months) and DTaP dose 4 (15–18 months) are past their ranges, so Overdue with a catch-up path. HepA dose 2 is still in range (12–23 months), so Due now, not overdue.",
+      "pediatrician": {
+        "name": "Dr. Marcus Lee",
+        "practice": "Northside Family Clinic",
+        "phone": "(312) 555-0187"
+      },
+      "doses": [
+        {
+          "vaccineId": "hepb",
+          "doseNumber": 1,
+          "status": "received",
+          "ageGiven": {
+            "value": 0,
+            "unit": "days"
+          }
+        },
+        {
+          "vaccineId": "hepb",
+          "doseNumber": 2,
+          "status": "received",
+          "ageGiven": {
+            "value": 1,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "rotavirus",
+          "doseNumber": 1,
+          "status": "received",
+          "ageGiven": {
+            "value": 2,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "dtap",
+          "doseNumber": 1,
+          "status": "received",
+          "ageGiven": {
+            "value": 2,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "hib",
+          "doseNumber": 1,
+          "status": "received",
+          "ageGiven": {
+            "value": 2,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "pcv",
+          "doseNumber": 1,
+          "status": "received",
+          "ageGiven": {
+            "value": 2,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "ipv",
+          "doseNumber": 1,
+          "status": "received",
+          "ageGiven": {
+            "value": 2,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "rotavirus",
+          "doseNumber": 2,
+          "status": "received",
+          "ageGiven": {
+            "value": 4,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "dtap",
+          "doseNumber": 2,
+          "status": "received",
+          "ageGiven": {
+            "value": 4,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "hib",
+          "doseNumber": 2,
+          "status": "received",
+          "ageGiven": {
+            "value": 4,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "pcv",
+          "doseNumber": 2,
+          "status": "received",
+          "ageGiven": {
+            "value": 4,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "ipv",
+          "doseNumber": 2,
+          "status": "received",
+          "ageGiven": {
+            "value": 4,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "rotavirus",
+          "doseNumber": 3,
+          "status": "received",
+          "ageGiven": {
+            "value": 6,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "dtap",
+          "doseNumber": 3,
+          "status": "received",
+          "ageGiven": {
+            "value": 6,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "hib",
+          "doseNumber": 3,
+          "status": "received",
+          "ageGiven": {
+            "value": 6,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "pcv",
+          "doseNumber": 3,
+          "status": "received",
+          "ageGiven": {
+            "value": 6,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "ipv",
+          "doseNumber": 3,
+          "status": "received",
+          "ageGiven": {
+            "value": 6,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "hepb",
+          "doseNumber": 3,
+          "status": "received",
+          "ageGiven": {
+            "value": 6,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "influenza",
+          "doseNumber": 1,
+          "status": "received",
+          "ageGiven": {
+            "value": 7,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "mmr",
+          "doseNumber": 1,
+          "status": "received",
+          "ageGiven": {
+            "value": 12,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "varicella",
+          "doseNumber": 1,
+          "status": "received",
+          "ageGiven": {
+            "value": 12,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "hepa",
+          "doseNumber": 1,
+          "status": "received",
+          "ageGiven": {
+            "value": 12,
+            "unit": "months"
+          }
+        }
+      ],
+      "priorReactions": "Fever of 101°F the day after her 4-month shots.",
+      "questions": [
+        {
+          "text": "How do we catch up on the shots she missed?",
+          "origin": "manual",
+          "textEs": "¿Cómo nos ponemos al día con las vacunas que le faltaron?"
+        }
+      ],
+      "priorReactionsEs": "Fiebre de 101 °F el día después de sus vacunas de los 4 meses."
+    },
+    {
+      "key": "sofia",
+      "name": "Sofía",
+      "ageToday": {
+        "value": 12,
+        "unit": "years",
+        "plusDays": 60
+      },
+      "source": "myAccount",
+      "scenario": "Records from abroad + unsure: early doses were given in Mexico. BCG is a custom vaccine under Other vaccines. MMR dose 2 is Not sure (Needs info) with an auto-added question. Tdap and MenACWY are Due now (11–12 years). HPV dose 1 was at 11½ years, so dose 2 is Due now (6–12 months after dose 1).",
+      "recordsFromAbroad": true,
+      "pediatrician": {
+        "name": "Dr. Priya Shah",
+        "practice": "Lakeview Pediatrics",
+        "phone": "(312) 555-0142"
+      },
+      "doses": [
+        {
+          "vaccineId": "hepb",
+          "doseNumber": 1,
+          "status": "received",
+          "ageGiven": {
+            "value": 0,
+            "unit": "days"
+          }
+        },
+        {
+          "vaccineId": "hepb",
+          "doseNumber": 2,
+          "status": "received",
+          "ageGiven": {
+            "value": 2,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "hepb",
+          "doseNumber": 3,
+          "status": "received",
+          "ageGiven": {
+            "value": 6,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "dtap",
+          "doseNumber": 1,
+          "status": "received",
+          "ageGiven": {
+            "value": 2,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "hib",
+          "doseNumber": 1,
+          "status": "received",
+          "ageGiven": {
+            "value": 2,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "pcv",
+          "doseNumber": 1,
+          "status": "received",
+          "ageGiven": {
+            "value": 2,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "ipv",
+          "doseNumber": 1,
+          "status": "received",
+          "ageGiven": {
+            "value": 2,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "dtap",
+          "doseNumber": 2,
+          "status": "received",
+          "ageGiven": {
+            "value": 4,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "hib",
+          "doseNumber": 2,
+          "status": "received",
+          "ageGiven": {
+            "value": 4,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "pcv",
+          "doseNumber": 2,
+          "status": "received",
+          "ageGiven": {
+            "value": 4,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "ipv",
+          "doseNumber": 2,
+          "status": "received",
+          "ageGiven": {
+            "value": 4,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "dtap",
+          "doseNumber": 3,
+          "status": "received",
+          "ageGiven": {
+            "value": 6,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "hib",
+          "doseNumber": 3,
+          "status": "received",
+          "ageGiven": {
+            "value": 6,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "pcv",
+          "doseNumber": 3,
+          "status": "received",
+          "ageGiven": {
+            "value": 6,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "ipv",
+          "doseNumber": 3,
+          "status": "received",
+          "ageGiven": {
+            "value": 6,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "dtap",
+          "doseNumber": 4,
+          "status": "received",
+          "ageGiven": {
+            "value": 18,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "dtap",
+          "doseNumber": 5,
+          "status": "received",
+          "ageGiven": {
+            "value": 4,
+            "unit": "years"
+          }
+        },
+        {
+          "vaccineId": "ipv",
+          "doseNumber": 3,
+          "status": "received",
+          "ageGiven": {
+            "value": 18,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "ipv",
+          "doseNumber": 4,
+          "status": "received",
+          "ageGiven": {
+            "value": 4,
+            "unit": "years"
+          }
+        },
+        {
+          "vaccineId": "hib",
+          "doseNumber": 4,
+          "status": "received",
+          "ageGiven": {
+            "value": 12,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "pcv",
+          "doseNumber": 4,
+          "status": "received",
+          "ageGiven": {
+            "value": 12,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "mmr",
+          "doseNumber": 1,
+          "status": "received",
+          "ageGiven": {
+            "value": 12,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "mmr",
+          "doseNumber": 2,
+          "status": "notSure"
+        },
+        {
+          "vaccineId": "varicella",
+          "doseNumber": 1,
+          "status": "received",
+          "ageGiven": {
+            "value": 12,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "varicella",
+          "doseNumber": 2,
+          "status": "received",
+          "ageGiven": {
+            "value": 4,
+            "unit": "years"
+          }
+        },
+        {
+          "vaccineId": "hepa",
+          "doseNumber": 1,
+          "status": "received",
+          "ageGiven": {
+            "value": 12,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "hepa",
+          "doseNumber": 2,
+          "status": "received",
+          "ageGiven": {
+            "value": 18,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "hpv",
+          "doseNumber": 1,
+          "status": "received",
+          "ageGiven": {
+            "value": 138,
+            "unit": "months"
+          }
+        },
+        {
+          "vaccineId": "influenza",
+          "doseNumber": 1,
+          "status": "received",
+          "ageGiven": {
+            "value": 11,
+            "unit": "years"
+          }
+        }
+      ],
+      "customVaccines": [
+        {
+          "nameAsWritten": "BCG",
+          "country": "Mexico",
+          "ageGiven": {
+            "value": 2,
+            "unit": "days"
+          },
+          "doseNotes": "Given at birth in Guadalajara. Scar on left upper arm.",
+          "pediatricianConfirmed": false,
+          "doseNotesEs": "Puesta al nacer en Guadalajara. Cicatriz en la parte superior del brazo izquierdo."
+        }
+      ],
+      "questions": [
+        {
+          "text": "Confirm how BCG given in Mexico fits the schedule.",
+          "origin": "customVaccine",
+          "textEs": "Confirmar cómo encaja la BCG, puesta en México, en el calendario."
+        },
+        {
+          "text": "Was her second MMR dose given? Check the record from Mexico.",
+          "vaccineId": "mmr",
+          "origin": "notSure",
+          "textEs": "¿Le pusieron la segunda dosis de MMR? Revisar el registro de México."
+        },
+        {
+          "text": "Can she get Tdap, MenACWY and HPV dose 2 at the same visit?",
+          "origin": "manual",
+          "textEs": "¿Le pueden poner Tdap, MenACWY y la dosis 2 de VPH en la misma visita?"
+        }
+      ]
+    }
+  ]
+}

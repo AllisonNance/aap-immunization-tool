@@ -1,0 +1,131 @@
+/* Schedule: List / Timeline. Grayscale wireframe. */
+.toggleRow {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: var(--space-5);
+}
+.toggle {
+  display: inline-flex;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+.toggle button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  min-height: calc(var(--touch-target) - 2px); /* + the 1px border = 44px */
+  min-width: var(--touch-target);
+  padding: 0 var(--space-3);
+  border: 1px solid transparent;
+  border-radius: calc(var(--radius-md) - 1px);
+  background: none;
+  color: var(--color-text-muted);
+  font: inherit;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  cursor: pointer;
+}
+.toggle button svg {
+  width: 16px;
+  height: 16px;
+}
+.toggle button[aria-pressed='true'] {
+  border-color: var(--color-border-strong);
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.rows,
+.doses,
+.timeline {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.rows {
+  display: flex;
+  flex-direction: column;
+}
+.vaccineRow {
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+.vaccineName {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--touch-target);
+  margin-bottom: var(--space-1);
+  font-weight: 700;
+}
+.doses {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+.dose {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  min-height: var(--touch-target);
+  padding: 0 var(--space-2);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+}
+.dose:hover {
+  background: var(--color-surface);
+}
+.doseName {
+  flex: none;
+  font-size: var(--text-sm);
+  white-space: nowrap;
+}
+
+/* Timeline: a vertical line with age stages. */
+.timeline {
+  position: relative;
+  padding-left: var(--space-5);
+  border-left: 2px solid var(--color-border);
+  margin-left: var(--space-2);
+}
+.stage {
+  position: relative;
+  padding-bottom: var(--space-4);
+}
+/* Each age stage's dot sits on the line, level with its label. */
+.stageLabel {
+  position: relative;
+  margin: 0 0 var(--space-1);
+  font-size: var(--text-md);
+}
+.stageLabel::before,
+.now::before {
+  content: '';
+  position: absolute;
+  left: calc(var(--space-5) * -1 - 7px);
+  top: calc(50% - 6px);
+  width: 12px;
+  height: 12px;
+  box-sizing: border-box;
+  border: 2px solid var(--color-border-strong);
+  border-radius: 50%;
+  background: var(--color-bg);
+}
+/* "Now": its own filled dot on the line, with the chip to the right of it (in the content column). */
+.now::before {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+}
+.now {
+  position: relative;
+  display: inline-block;
+  margin: 0 0 var(--space-3);
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-pill);
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  font-size: var(--text-xs);
+  font-weight: 700;
+}
+

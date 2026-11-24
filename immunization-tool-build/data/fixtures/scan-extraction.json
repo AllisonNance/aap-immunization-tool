@@ -1,0 +1,66 @@
+{
+  "sample": true,
+  "description": "Mock OcrService result for a scanned paper record. Includes one of each review flag.",
+  "forChild": "sofia",
+  "extracted": [
+    {
+      "rawName": "DPT",
+      "rawDate": "03/04/2015",
+      "matchedVaccineId": "dtap",
+      "dateAmbiguous": true,
+      "confidence": 0.82,
+      "flags": [
+        "ambiguousDate"
+      ]
+    },
+    {
+      "rawName": "BCG",
+      "rawDate": "15/02/2014",
+      "dateAmbiguous": false,
+      "confidence": 0.91,
+      "flags": [
+        "unrecognized"
+      ]
+    },
+    {
+      "rawName": "Hep B",
+      "rawDate": "02/10/2013",
+      "matchedVaccineId": "hepb",
+      "dateAmbiguous": true,
+      "confidence": 0.64,
+      "flags": [
+        "ambiguousDate",
+        "beforeBirth"
+      ]
+    },
+    {
+      "rawName": "Polio",
+      "rawDate": "20/04/2014",
+      "matchedVaccineId": "ipv",
+      "dateAmbiguous": false,
+      "confidence": 0.88,
+      "flags": [
+        "duplicate"
+      ]
+    },
+    {
+      "rawName": "Triple viral (SRP)",
+      "rawDate": "18/02/2015",
+      "matchedVaccineId": "mmr",
+      "dateAmbiguous": false,
+      "confidence": 0.77,
+      "flags": []
+    },
+    {
+      "rawName": "Hib",
+      "rawDate": "28/02/2014",
+      "matchedVaccineId": "hib",
+      "dateAmbiguous": false,
+      "confidence": 0.7,
+      "flags": [
+        "intervalTooShort"
+      ]
+    }
+  ],
+  "note": "Raw dates are as printed on the card (day-first here). Review must ask the caregiver to resolve ambiguous dates; the seeder should shift these to fit Sofía's seeded date of birth."
+}

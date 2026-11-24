@@ -1,0 +1,786 @@
+{
+  "sample": true,
+  "source": {
+    "title": "Recommended Child and Adolescent Immunization Schedule for Ages 18 Years or Younger, United States, 2026",
+    "publisher": "American Academy of Pediatrics",
+    "updated": "2026-09-02",
+    "url": "https://downloads.aap.org/AAP/PDF/AAP-Immunization-Schedule.pdf",
+    "tables": "Table 1 (routine ages), Table 2 (catch-up minimum ages and intervals), Notes (routine vaccination)"
+  },
+  "note": "Plain-language copy (English and Spanish) is SAMPLE, written from the AAP 2026 schedule for prototyping. Needs AAP clinical and editorial review, including review of the Spanish by a medical translator. HealthyChildren.org links to be supplied by AAP.",
+  "vaccines": [
+    {
+      "id": "hepb",
+      "sample": true,
+      "abbreviation": "HepB",
+      "name": {
+        "en": "Hepatitis B",
+        "es": "Hepatitis B"
+      },
+      "searchAliases": {
+        "en": [
+          "hep b",
+          "hepatitis b"
+        ],
+        "es": [
+          "hepatitis b"
+        ]
+      },
+      "protectsAgainst": {
+        "en": "Hepatitis B, a virus that infects the liver and can cause lifelong liver disease.",
+        "es": "La hepatitis B, un virus que infecta el hígado y puede causar enfermedad hepática de por vida."
+      },
+      "dosesSummary": {
+        "en": "3 doses: at birth, 1–2 months, and 6–18 months.",
+        "es": "3 dosis: al nacer, a los 1–2 meses y a los 6–18 meses."
+      },
+      "commonSideEffects": {
+        "en": "Soreness, redness or swelling where the shot was given; mild fever; fussiness.",
+        "es": "Dolor, enrojecimiento o hinchazón donde se puso la vacuna; fiebre leve; irritabilidad."
+      },
+      "reasonsToPostpone": {
+        "en": "Your pediatrician may wait if your child has a moderate or severe illness, with or without fever. A mild cold is usually not a reason to wait.",
+        "es": "Su pediatra puede esperar si su hijo tiene una enfermedad moderada o grave, con o sin fiebre. Un resfriado leve normalmente no es motivo para esperar."
+      },
+      "givenWith": {
+        "en": "Also given as part of Pediarix (DTaP-HepB-IPV) or Vaxelis (DTaP-IPV-Hib-HepB).",
+        "es": "También forma parte de Pediarix (DTaP-HepB-IPV) o Vaxelis (DTaP-IPV-Hib-HepB)."
+      },
+      "productNames": [
+        "Engerix-B",
+        "Recombivax HB"
+      ],
+      "links": {
+        "healthyChildren": null,
+        "aapFactSheet": "https://www.aap.org/IZFactSheets"
+      }
+    },
+    {
+      "id": "rotavirus",
+      "sample": true,
+      "abbreviation": "RV",
+      "name": {
+        "en": "Rotavirus",
+        "es": "Rotavirus"
+      },
+      "searchAliases": {
+        "en": [
+          "rota",
+          "rv1",
+          "rv5",
+          "rotateq",
+          "rotarix"
+        ],
+        "es": [
+          "rotavirus"
+        ]
+      },
+      "protectsAgainst": {
+        "en": "Rotavirus, a common cause of severe diarrhea and vomiting in babies.",
+        "es": "El rotavirus, una causa común de diarrea y vómitos graves en los bebés."
+      },
+      "dosesSummary": {
+        "en": "Given by mouth: 2 doses (Rotarix) at 2 and 4 months, or 3 doses (RotaTeq) at 2, 4 and 6 months. Not given after 8 months.",
+        "es": "Se da por la boca: 2 dosis (Rotarix) a los 2 y 4 meses, o 3 dosis (RotaTeq) a los 2, 4 y 6 meses. No se da después de los 8 meses."
+      },
+      "commonSideEffects": {
+        "en": "Mild, temporary fussiness, diarrhea or vomiting.",
+        "es": "Irritabilidad, diarrea o vómitos leves y pasajeros."
+      },
+      "reasonsToPostpone": {
+        "en": "Your pediatrician may wait if your child has a moderate or severe illness, with or without fever. A mild cold is usually not a reason to wait.",
+        "es": "Su pediatra puede esperar si su hijo tiene una enfermedad moderada o grave, con o sin fiebre. Un resfriado leve normalmente no es motivo para esperar."
+      },
+      "givenWith": {
+        "en": "Given by mouth at the same visits as other infant shots.",
+        "es": "Se da por la boca en las mismas visitas que otras vacunas del bebé."
+      },
+      "productNames": [
+        "Rotarix",
+        "RotaTeq"
+      ],
+      "links": {
+        "healthyChildren": null,
+        "aapFactSheet": "https://www.aap.org/IZFactSheets"
+      }
+    },
+    {
+      "id": "dtap",
+      "sample": true,
+      "abbreviation": "DTaP",
+      "name": {
+        "en": "Diphtheria, tetanus and whooping cough (DTaP)",
+        "es": "Difteria, tétanos y tos ferina (DTaP)"
+      },
+      "searchAliases": {
+        "en": [
+          "dtap",
+          "whooping cough",
+          "pertussis",
+          "tetanus",
+          "diphtheria"
+        ],
+        "es": [
+          "tos ferina",
+          "tétanos",
+          "difteria"
+        ]
+      },
+      "protectsAgainst": {
+        "en": "Diphtheria, tetanus (lockjaw) and pertussis (whooping cough).",
+        "es": "La difteria, el tétanos y la tos ferina (pertussis)."
+      },
+      "dosesSummary": {
+        "en": "5 doses: 2, 4, 6 months, 15–18 months, and 4–6 years.",
+        "es": "5 dosis: a los 2, 4 y 6 meses, a los 15–18 meses y a los 4–6 años."
+      },
+      "commonSideEffects": {
+        "en": "Soreness, redness or swelling where the shot was given; mild fever; fussiness. Swelling of the arm or leg after later doses.",
+        "es": "Dolor, enrojecimiento o hinchazón donde se puso la vacuna; fiebre leve; irritabilidad. Hinchazón del brazo o la pierna después de las últimas dosis."
+      },
+      "reasonsToPostpone": {
+        "en": "Your pediatrician may wait if your child has a moderate or severe illness, with or without fever. A mild cold is usually not a reason to wait.",
+        "es": "Su pediatra puede esperar si su hijo tiene una enfermedad moderada o grave, con o sin fiebre. Un resfriado leve normalmente no es motivo para esperar."
+      },
+      "givenWith": {
+        "en": "Often given as part of a combination shot such as Pediarix, Pentacel, Vaxelis, Kinrix or Quadracel. Log each vaccine it covered.",
+        "es": "A menudo se da como parte de una vacuna combinada, como Pediarix, Pentacel, Vaxelis, Kinrix o Quadracel. Registre cada vacuna que incluyó."
+      },
+      "productNames": [
+        "Daptacel",
+        "Infanrix"
+      ],
+      "links": {
+        "healthyChildren": null,
+        "aapFactSheet": "https://www.aap.org/IZFactSheets"
+      }
+    },
+    {
+      "id": "hib",
+      "sample": true,
+      "abbreviation": "Hib",
+      "name": {
+        "en": "Haemophilus influenzae type b (Hib)",
+        "es": "Haemophilus influenzae tipo b (Hib)"
+      },
+      "searchAliases": {
+        "en": [
+          "hib",
+          "haemophilus"
+        ],
+        "es": [
+          "hib"
+        ]
+      },
+      "protectsAgainst": {
+        "en": "Hib bacteria, which can cause meningitis, pneumonia and serious throat swelling in young children.",
+        "es": "La bacteria Hib, que puede causar meningitis, neumonía e hinchazón grave de la garganta en niños pequeños."
+      },
+      "dosesSummary": {
+        "en": "3 or 4 doses: 2, 4, (6) months and a booster at 12–15 months, depending on the brand.",
+        "es": "3 o 4 dosis: a los 2, 4 y (6) meses, y un refuerzo a los 12–15 meses, según la marca."
+      },
+      "commonSideEffects": {
+        "en": "Soreness, redness or swelling where the shot was given; mild fever; fussiness.",
+        "es": "Dolor, enrojecimiento o hinchazón donde se puso la vacuna; fiebre leve; irritabilidad."
+      },
+      "reasonsToPostpone": {
+        "en": "Your pediatrician may wait if your child has a moderate or severe illness, with or without fever. A mild cold is usually not a reason to wait.",
+        "es": "Su pediatra puede esperar si su hijo tiene una enfermedad moderada o grave, con o sin fiebre. Un resfriado leve normalmente no es motivo para esperar."
+      },
+      "givenWith": {
+        "en": "Also part of Pentacel and Vaxelis.",
+        "es": "También forma parte de Pentacel y Vaxelis."
+      },
+      "productNames": [
+        "ActHIB",
+        "Hiberix",
+        "PedvaxHIB"
+      ],
+      "links": {
+        "healthyChildren": null,
+        "aapFactSheet": "https://www.aap.org/IZFactSheets"
+      }
+    },
+    {
+      "id": "pcv",
+      "sample": true,
+      "abbreviation": "PCV",
+      "name": {
+        "en": "Pneumococcal (PCV)",
+        "es": "Neumococo (PCV)"
+      },
+      "searchAliases": {
+        "en": [
+          "pcv",
+          "pneumococcal",
+          "prevnar",
+          "pcv15",
+          "pcv20"
+        ],
+        "es": [
+          "neumococo",
+          "neumocócica"
+        ]
+      },
+      "protectsAgainst": {
+        "en": "Pneumococcal bacteria, which can cause ear infections, pneumonia, meningitis and blood infections.",
+        "es": "La bacteria neumococo, que puede causar infecciones de oído, neumonía, meningitis e infecciones de la sangre."
+      },
+      "dosesSummary": {
+        "en": "4 doses: 2, 4, 6 months and 12–15 months.",
+        "es": "4 dosis: a los 2, 4 y 6 meses y a los 12–15 meses."
+      },
+      "commonSideEffects": {
+        "en": "Soreness, redness or swelling where the shot was given; mild fever; fussiness.",
+        "es": "Dolor, enrojecimiento o hinchazón donde se puso la vacuna; fiebre leve; irritabilidad."
+      },
+      "reasonsToPostpone": {
+        "en": "Your pediatrician may wait if your child has a moderate or severe illness, with or without fever. A mild cold is usually not a reason to wait.",
+        "es": "Su pediatra puede esperar si su hijo tiene una enfermedad moderada o grave, con o sin fiebre. Un resfriado leve normalmente no es motivo para esperar."
+      },
+      "givenWith": {
+        "en": "Given at the same visits as other infant shots.",
+        "es": "Se da en las mismas visitas que otras vacunas del bebé."
+      },
+      "productNames": [
+        "Vaxneuvance",
+        "Prevnar 20"
+      ],
+      "links": {
+        "healthyChildren": null,
+        "aapFactSheet": "https://www.aap.org/IZFactSheets"
+      }
+    },
+    {
+      "id": "ipv",
+      "sample": true,
+      "abbreviation": "IPV",
+      "name": {
+        "en": "Polio (IPV)",
+        "es": "Polio (IPV)"
+      },
+      "searchAliases": {
+        "en": [
+          "polio",
+          "ipv"
+        ],
+        "es": [
+          "polio"
+        ]
+      },
+      "protectsAgainst": {
+        "en": "Polio, a virus that can cause paralysis.",
+        "es": "La polio, un virus que puede causar parálisis."
+      },
+      "dosesSummary": {
+        "en": "4 doses: 2 and 4 months, 6–18 months, and 4–6 years.",
+        "es": "4 dosis: a los 2 y 4 meses, a los 6–18 meses y a los 4–6 años."
+      },
+      "commonSideEffects": {
+        "en": "Soreness where the shot was given.",
+        "es": "Dolor donde se puso la vacuna."
+      },
+      "reasonsToPostpone": {
+        "en": "Your pediatrician may wait if your child has a moderate or severe illness, with or without fever. A mild cold is usually not a reason to wait.",
+        "es": "Su pediatra puede esperar si su hijo tiene una enfermedad moderada o grave, con o sin fiebre. Un resfriado leve normalmente no es motivo para esperar."
+      },
+      "givenWith": {
+        "en": "Also part of Pediarix, Pentacel, Kinrix, Quadracel and Vaxelis.",
+        "es": "También forma parte de Pediarix, Pentacel, Kinrix, Quadracel y Vaxelis."
+      },
+      "productNames": [
+        "Ipol"
+      ],
+      "links": {
+        "healthyChildren": null,
+        "aapFactSheet": "https://www.aap.org/IZFactSheets"
+      }
+    },
+    {
+      "id": "influenza",
+      "sample": true,
+      "abbreviation": "Flu",
+      "name": {
+        "en": "Influenza (flu)",
+        "es": "Influenza (gripe)"
+      },
+      "searchAliases": {
+        "en": [
+          "flu",
+          "influenza",
+          "flumist"
+        ],
+        "es": [
+          "gripe",
+          "influenza"
+        ]
+      },
+      "protectsAgainst": {
+        "en": "Influenza (flu), which can cause serious illness and hospital stays in young children.",
+        "es": "La influenza (gripe), que puede causar enfermedad grave y hospitalizaciones en niños pequeños."
+      },
+      "dosesSummary": {
+        "en": "Every year from 6 months. Some children under 9 need 2 doses, 4 weeks apart, in their first flu season.",
+        "es": "Cada año desde los 6 meses. Algunos niños menores de 9 años necesitan 2 dosis, con 4 semanas de diferencia, en su primera temporada de gripe."
+      },
+      "commonSideEffects": {
+        "en": "Soreness where the shot was given, mild fever, aches. Nasal spray: runny nose.",
+        "es": "Dolor donde se puso la vacuna, fiebre leve, dolores. Vacuna nasal: secreción nasal."
+      },
+      "reasonsToPostpone": {
+        "en": "Your pediatrician may wait if your child has a moderate or severe illness, with or without fever. A mild cold is usually not a reason to wait.",
+        "es": "Su pediatra puede esperar si su hijo tiene una enfermedad moderada o grave, con o sin fiebre. Un resfriado leve normalmente no es motivo para esperar."
+      },
+      "givenWith": {
+        "en": "Can be given with other vaccines.",
+        "es": "Se puede dar junto con otras vacunas."
+      },
+      "productNames": [
+        "Flucelvax",
+        "Flublok",
+        "FluMist"
+      ],
+      "links": {
+        "healthyChildren": null,
+        "aapFactSheet": "https://www.aap.org/IZFactSheets"
+      }
+    },
+    {
+      "id": "covid19",
+      "sample": true,
+      "abbreviation": "COVID-19",
+      "name": {
+        "en": "COVID-19",
+        "es": "COVID-19"
+      },
+      "searchAliases": {
+        "en": [
+          "covid",
+          "coronavirus",
+          "covid-19"
+        ],
+        "es": [
+          "covid",
+          "coronavirus"
+        ]
+      },
+      "protectsAgainst": {
+        "en": "COVID-19.",
+        "es": "El COVID-19."
+      },
+      "dosesSummary": {
+        "en": "1 or more doses of the current season's vaccine for ages 6–23 months; for older children at higher risk or who want protection.",
+        "es": "1 o más dosis de la vacuna de la temporada actual para niños de 6 a 23 meses; para niños mayores con más riesgo o que deseen protección."
+      },
+      "commonSideEffects": {
+        "en": "Sore arm, tiredness, headache, mild fever.",
+        "es": "Dolor en el brazo, cansancio, dolor de cabeza, fiebre leve."
+      },
+      "reasonsToPostpone": {
+        "en": "Your pediatrician may wait if your child has a moderate or severe illness, with or without fever. A mild cold is usually not a reason to wait.",
+        "es": "Su pediatra puede esperar si su hijo tiene una enfermedad moderada o grave, con o sin fiebre. Un resfriado leve normalmente no es motivo para esperar."
+      },
+      "givenWith": {
+        "en": "Can be given with other vaccines.",
+        "es": "Se puede dar junto con otras vacunas."
+      },
+      "productNames": [
+        "Comirnaty",
+        "mNexspike",
+        "Spikevax",
+        "Nuvaxovid"
+      ],
+      "links": {
+        "healthyChildren": null,
+        "aapFactSheet": "https://www.aap.org/IZFactSheets"
+      }
+    },
+    {
+      "id": "mmr",
+      "sample": true,
+      "abbreviation": "MMR",
+      "name": {
+        "en": "Measles, mumps and rubella (MMR)",
+        "es": "Sarampión, paperas y rubéola (MMR)"
+      },
+      "searchAliases": {
+        "en": [
+          "mmr",
+          "measles",
+          "mumps",
+          "rubella",
+          "mmrv",
+          "proquad"
+        ],
+        "es": [
+          "sarampión",
+          "paperas",
+          "rubéola"
+        ]
+      },
+      "protectsAgainst": {
+        "en": "Measles, mumps and rubella.",
+        "es": "El sarampión, las paperas y la rubéola."
+      },
+      "dosesSummary": {
+        "en": "2 doses: 12–15 months and 4–6 years.",
+        "es": "2 dosis: a los 12–15 meses y a los 4–6 años."
+      },
+      "commonSideEffects": {
+        "en": "Fever or mild rash 1–2 weeks after the shot; soreness where the shot was given.",
+        "es": "Fiebre o sarpullido leve 1 a 2 semanas después de la vacuna; dolor donde se puso."
+      },
+      "reasonsToPostpone": {
+        "en": "Your pediatrician may wait if your child has a moderate or severe illness, with or without fever. A mild cold is usually not a reason to wait.",
+        "es": "Su pediatra puede esperar si su hijo tiene una enfermedad moderada o grave, con o sin fiebre. Un resfriado leve normalmente no es motivo para esperar."
+      },
+      "givenWith": {
+        "en": "Can be given with varicella as one shot (MMRV, ProQuad). Log both vaccines.",
+        "es": "Se puede dar junto con la de varicela en una sola vacuna (MMRV, ProQuad). Registre las dos vacunas."
+      },
+      "productNames": [
+        "M-M-R II",
+        "Priorix"
+      ],
+      "links": {
+        "healthyChildren": null,
+        "aapFactSheet": "https://www.aap.org/IZFactSheets"
+      }
+    },
+    {
+      "id": "varicella",
+      "sample": true,
+      "abbreviation": "VAR",
+      "name": {
+        "en": "Chickenpox (varicella)",
+        "es": "Varicela"
+      },
+      "searchAliases": {
+        "en": [
+          "chickenpox",
+          "varicella",
+          "var"
+        ],
+        "es": [
+          "varicela"
+        ]
+      },
+      "protectsAgainst": {
+        "en": "Chickenpox (varicella).",
+        "es": "La varicela."
+      },
+      "dosesSummary": {
+        "en": "2 doses: 12–15 months and 4–6 years.",
+        "es": "2 dosis: a los 12–15 meses y a los 4–6 años."
+      },
+      "commonSideEffects": {
+        "en": "Soreness where the shot was given, mild fever, a few spots like a mild rash.",
+        "es": "Dolor donde se puso la vacuna, fiebre leve, algunas manchas como un sarpullido leve."
+      },
+      "reasonsToPostpone": {
+        "en": "Your pediatrician may wait if your child has a moderate or severe illness, with or without fever. A mild cold is usually not a reason to wait.",
+        "es": "Su pediatra puede esperar si su hijo tiene una enfermedad moderada o grave, con o sin fiebre. Un resfriado leve normalmente no es motivo para esperar."
+      },
+      "givenWith": {
+        "en": "Can be given with MMR as one shot (MMRV, ProQuad). Log both vaccines.",
+        "es": "Se puede dar junto con la MMR en una sola vacuna (MMRV, ProQuad). Registre las dos vacunas."
+      },
+      "productNames": [
+        "Varivax"
+      ],
+      "links": {
+        "healthyChildren": null,
+        "aapFactSheet": "https://www.aap.org/IZFactSheets"
+      }
+    },
+    {
+      "id": "hepa",
+      "sample": true,
+      "abbreviation": "HepA",
+      "name": {
+        "en": "Hepatitis A",
+        "es": "Hepatitis A"
+      },
+      "searchAliases": {
+        "en": [
+          "hep a",
+          "hepatitis a"
+        ],
+        "es": [
+          "hepatitis a"
+        ]
+      },
+      "protectsAgainst": {
+        "en": "Hepatitis A, a virus that infects the liver.",
+        "es": "La hepatitis A, un virus que infecta el hígado."
+      },
+      "dosesSummary": {
+        "en": "2 doses at 12–23 months, at least 6 months apart.",
+        "es": "2 dosis entre los 12 y 23 meses, con al menos 6 meses de diferencia."
+      },
+      "commonSideEffects": {
+        "en": "Soreness, redness or swelling where the shot was given; mild fever; fussiness.",
+        "es": "Dolor, enrojecimiento o hinchazón donde se puso la vacuna; fiebre leve; irritabilidad."
+      },
+      "reasonsToPostpone": {
+        "en": "Your pediatrician may wait if your child has a moderate or severe illness, with or without fever. A mild cold is usually not a reason to wait.",
+        "es": "Su pediatra puede esperar si su hijo tiene una enfermedad moderada o grave, con o sin fiebre. Un resfriado leve normalmente no es motivo para esperar."
+      },
+      "givenWith": {
+        "en": "Can be given with other vaccines.",
+        "es": "Se puede dar junto con otras vacunas."
+      },
+      "productNames": [
+        "Havrix",
+        "Vaqta"
+      ],
+      "links": {
+        "healthyChildren": null,
+        "aapFactSheet": "https://www.aap.org/IZFactSheets"
+      }
+    },
+    {
+      "id": "tdap",
+      "sample": true,
+      "abbreviation": "Tdap",
+      "name": {
+        "en": "Tetanus, diphtheria and whooping cough booster (Tdap)",
+        "es": "Refuerzo de tétanos, difteria y tos ferina (Tdap)"
+      },
+      "searchAliases": {
+        "en": [
+          "tdap",
+          "td",
+          "whooping cough booster"
+        ],
+        "es": [
+          "tdap",
+          "tos ferina"
+        ]
+      },
+      "protectsAgainst": {
+        "en": "Tetanus, diphtheria and whooping cough in older children and teens.",
+        "es": "El tétanos, la difteria y la tos ferina en niños mayores y adolescentes."
+      },
+      "dosesSummary": {
+        "en": "1 dose at 11–12 years.",
+        "es": "1 dosis a los 11–12 años."
+      },
+      "commonSideEffects": {
+        "en": "Soreness, redness or swelling where the shot was given; mild fever; fussiness.",
+        "es": "Dolor, enrojecimiento o hinchazón donde se puso la vacuna; fiebre leve; irritabilidad."
+      },
+      "reasonsToPostpone": {
+        "en": "Your pediatrician may wait if your child has a moderate or severe illness, with or without fever. A mild cold is usually not a reason to wait.",
+        "es": "Su pediatra puede esperar si su hijo tiene una enfermedad moderada o grave, con o sin fiebre. Un resfriado leve normalmente no es motivo para esperar."
+      },
+      "givenWith": {
+        "en": "Often given at the same visit as HPV and MenACWY.",
+        "es": "A menudo se da en la misma visita que la del VPH y la MenACWY."
+      },
+      "productNames": [
+        "Adacel",
+        "Boostrix"
+      ],
+      "links": {
+        "healthyChildren": null,
+        "aapFactSheet": "https://www.aap.org/IZFactSheets"
+      }
+    },
+    {
+      "id": "hpv",
+      "sample": true,
+      "abbreviation": "HPV",
+      "name": {
+        "en": "Human papillomavirus (HPV)",
+        "es": "Virus del papiloma humano (VPH)"
+      },
+      "searchAliases": {
+        "en": [
+          "hpv",
+          "gardasil",
+          "papillomavirus"
+        ],
+        "es": [
+          "vph",
+          "papiloma"
+        ]
+      },
+      "protectsAgainst": {
+        "en": "HPV, which can cause several types of cancer later in life.",
+        "es": "El VPH, que puede causar varios tipos de cáncer más adelante en la vida."
+      },
+      "dosesSummary": {
+        "en": "2 doses 6–12 months apart when started at 9–14 years (AAP recommends starting at 9–12). 3 doses if started at 15 or older.",
+        "es": "2 dosis con 6 a 12 meses de diferencia si se empieza entre los 9 y 14 años (la AAP recomienda empezar entre los 9 y 12). 3 dosis si se empieza a los 15 años o más."
+      },
+      "commonSideEffects": {
+        "en": "Soreness where the shot was given; some teens feel faint, so they may sit for 15 minutes afterward.",
+        "es": "Dolor donde se puso la vacuna; algunos adolescentes se sienten mareados, por eso pueden quedarse sentados 15 minutos después."
+      },
+      "reasonsToPostpone": {
+        "en": "Your pediatrician may wait if your child has a moderate or severe illness, with or without fever. A mild cold is usually not a reason to wait.",
+        "es": "Su pediatra puede esperar si su hijo tiene una enfermedad moderada o grave, con o sin fiebre. Un resfriado leve normalmente no es motivo para esperar."
+      },
+      "givenWith": {
+        "en": "Often given at the same visit as Tdap and MenACWY.",
+        "es": "A menudo se da en la misma visita que la Tdap y la MenACWY."
+      },
+      "productNames": [
+        "Gardasil 9"
+      ],
+      "links": {
+        "healthyChildren": null,
+        "aapFactSheet": "https://www.aap.org/IZFactSheets"
+      }
+    },
+    {
+      "id": "menacwy",
+      "sample": true,
+      "abbreviation": "MenACWY",
+      "name": {
+        "en": "Meningococcal (MenACWY)",
+        "es": "Meningococo (MenACWY)"
+      },
+      "searchAliases": {
+        "en": [
+          "menacwy",
+          "meningococcal",
+          "meningitis",
+          "menveo",
+          "menquadfi"
+        ],
+        "es": [
+          "meningococo",
+          "meningitis"
+        ]
+      },
+      "protectsAgainst": {
+        "en": "Meningococcal bacteria (groups A, C, W, Y), which cause meningitis and blood infections.",
+        "es": "La bacteria meningococo (grupos A, C, W, Y), que causa meningitis e infecciones de la sangre."
+      },
+      "dosesSummary": {
+        "en": "2 doses: 11–12 years and a booster at 16.",
+        "es": "2 dosis: a los 11–12 años y un refuerzo a los 16."
+      },
+      "commonSideEffects": {
+        "en": "Soreness, redness or swelling where the shot was given; mild fever; fussiness.",
+        "es": "Dolor, enrojecimiento o hinchazón donde se puso la vacuna; fiebre leve; irritabilidad."
+      },
+      "reasonsToPostpone": {
+        "en": "Your pediatrician may wait if your child has a moderate or severe illness, with or without fever. A mild cold is usually not a reason to wait.",
+        "es": "Su pediatra puede esperar si su hijo tiene una enfermedad moderada o grave, con o sin fiebre. Un resfriado leve normalmente no es motivo para esperar."
+      },
+      "givenWith": {
+        "en": "Often given at the same visit as Tdap and HPV.",
+        "es": "A menudo se da en la misma visita que la Tdap y la del VPH."
+      },
+      "productNames": [
+        "Menveo",
+        "MenQuadfi"
+      ],
+      "links": {
+        "healthyChildren": null,
+        "aapFactSheet": "https://www.aap.org/IZFactSheets"
+      }
+    },
+    {
+      "id": "menb",
+      "sample": true,
+      "abbreviation": "MenB",
+      "name": {
+        "en": "Meningococcal B (MenB)",
+        "es": "Meningococo B (MenB)"
+      },
+      "searchAliases": {
+        "en": [
+          "menb",
+          "meningococcal b",
+          "bexsero",
+          "trumenba"
+        ],
+        "es": [
+          "meningococo b"
+        ]
+      },
+      "protectsAgainst": {
+        "en": "Meningococcal group B bacteria.",
+        "es": "La bacteria meningococo del grupo B."
+      },
+      "dosesSummary": {
+        "en": "For ages 16–18, decided with your pediatrician; earlier for some health conditions.",
+        "es": "Entre los 16 y 18 años, según lo que decida con su pediatra; antes en algunas condiciones de salud."
+      },
+      "commonSideEffects": {
+        "en": "Soreness, redness or swelling where the shot was given; mild fever; fussiness.",
+        "es": "Dolor, enrojecimiento o hinchazón donde se puso la vacuna; fiebre leve; irritabilidad."
+      },
+      "reasonsToPostpone": {
+        "en": "Your pediatrician may wait if your child has a moderate or severe illness, with or without fever. A mild cold is usually not a reason to wait.",
+        "es": "Su pediatra puede esperar si su hijo tiene una enfermedad moderada o grave, con o sin fiebre. Un resfriado leve normalmente no es motivo para esperar."
+      },
+      "givenWith": {
+        "en": "Penbraya and Penmenvy cover groups A, B, C, W and Y in one shot.",
+        "es": "Penbraya y Penmenvy protegen contra los grupos A, B, C, W y Y en una sola vacuna."
+      },
+      "productNames": [
+        "Bexsero",
+        "Trumenba"
+      ],
+      "links": {
+        "healthyChildren": null,
+        "aapFactSheet": "https://www.aap.org/IZFactSheets"
+      }
+    },
+    {
+      "id": "rsv-mab",
+      "sample": true,
+      "abbreviation": "RSV-mAb",
+      "name": {
+        "en": "RSV protection for babies (nirsevimab, clesrovimab)",
+        "es": "Protección contra el VRS para bebés"
+      },
+      "searchAliases": {
+        "en": [
+          "rsv",
+          "beyfortus",
+          "enflonsia",
+          "nirsevimab"
+        ],
+        "es": [
+          "vrs",
+          "virus respiratorio sincitial"
+        ]
+      },
+      "protectsAgainst": {
+        "en": "RSV, a common cause of serious breathing illness in babies. This is an antibody shot, not a vaccine.",
+        "es": "El VRS (virus respiratorio sincitial), una causa común de enfermedad respiratoria grave en los bebés. Es una inyección de anticuerpos, no una vacuna."
+      },
+      "dosesSummary": {
+        "en": "1 dose during RSV season for babies under 8 months, depending on whether the pregnant parent got an RSV vaccine; some higher-risk children get a dose in their second season.",
+        "es": "1 dosis durante la temporada de VRS para bebés menores de 8 meses, según si la persona embarazada recibió la vacuna contra el VRS; algunos niños con más riesgo reciben una dosis en su segunda temporada."
+      },
+      "commonSideEffects": {
+        "en": "Soreness where the shot was given, mild rash.",
+        "es": "Dolor donde se puso la inyección, sarpullido leve."
+      },
+      "reasonsToPostpone": {
+        "en": "Your pediatrician may wait if your child has a moderate or severe illness, with or without fever. A mild cold is usually not a reason to wait.",
+        "es": "Su pediatra puede esperar si su hijo tiene una enfermedad moderada o grave, con o sin fiebre. Un resfriado leve normalmente no es motivo para esperar."
+      },
+      "givenWith": {
+        "en": "Can be given with other infant shots.",
+        "es": "Se puede dar junto con otras vacunas del bebé."
+      },
+      "productNames": [
+        "Beyfortus",
+        "Enflonsia"
+      ],
+      "links": {
+        "healthyChildren": null,
+        "aapFactSheet": "https://www.aap.org/IZFactSheets"
+      }
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+/* Printable record (SPEC.md §6.2 Export) — grayscale, prints on one sheet where it can. */
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.page h1,
+.page h2 {
+  margin: 0;
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+.child {
+  margin: 0;
+  font-size: var(--text-lg);
+  font-weight: 700;
+}
+.muted {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+.notice {
+  padding: var(--space-3);
+  border: 2px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+}
+.notice p {
+  margin: 0;
+}
+.noticeTitle {
+  font-weight: 700;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+}
+.table th,
+.table td {
+  padding: var(--space-2) var(--space-1);
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+  vertical-align: top;
+}
+.table thead th {
+  border-bottom: 2px solid var(--color-border-strong);
+}
+.table tbody th {
+  font-weight: 600;
+}
+.other {
+  margin: var(--space-2) 0 0;
+  padding-left: var(--space-5);
+}
+@media print {
+  .table {
+    font-size: 10pt;
+  }
+}

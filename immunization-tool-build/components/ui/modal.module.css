@@ -1,0 +1,75 @@
+/* Popup: a card centered over a dimmed page. Grayscale; never black. */
+.dialog {
+  width: calc(100% - 2 * var(--space-4));
+  max-width: 480px;
+  max-height: calc(100dvh - 2 * var(--space-5));
+  padding: 0;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+  color: var(--color-text);
+  box-shadow: 0 8px 24px var(--shadow-color);
+}
+.dialog::backdrop {
+  background: rgb(61 61 61 / 0.55);
+}
+.panel {
+  display: flex;
+  flex-direction: column;
+  max-height: inherit;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-2) var(--space-2) var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+.title {
+  margin: 0;
+  font-size: var(--text-lg);
+}
+.close {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: var(--touch-target);
+  height: var(--touch-target);
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: none;
+  color: var(--color-text);
+  cursor: pointer;
+}
+.close:hover {
+  background: var(--color-surface);
+}
+.close svg {
+  width: 22px;
+  height: 22px;
+}
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  overflow-y: auto;
+}
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+.footer > * {
+  flex: 1;
+}
+@media (min-width: 768px) {
+  .footer > * {
+    flex: none;
+    min-width: 120px;
+  }
+}

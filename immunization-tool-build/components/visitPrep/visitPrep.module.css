@@ -1,0 +1,266 @@
+/* Screen 5 · Visit Prep — grayscale wireframe; prints cleanly. */
+.screen {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6); /* between sections */
+}
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+.head h1 {
+  margin: 0;
+}
+.muted {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+.strong {
+  margin: 0;
+  font-weight: 700;
+}
+.h3 {
+  margin: 0 0 var(--space-2);
+  font-size: var(--text-md);
+}
+.section h2 {
+  margin-bottom: var(--space-2);
+}
+
+.appointment {
+  padding: var(--space-4);
+  border: 2px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+.apptRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+.apptDate {
+  margin: 0;
+  font-size: var(--text-lg);
+  font-weight: 700;
+}
+.apptForm,
+.editForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.buttons {
+  display: flex;
+  gap: var(--space-2);
+}
+.error {
+  display: flex;
+  gap: var(--space-2);
+  margin: 0;
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+.error svg {
+  flex: none;
+  width: 18px;
+  height: 18px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  min-height: var(--touch-target);
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+}
+
+.groups {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.groupTitle {
+  margin: 0 0 var(--space-2);
+  font-size: var(--text-md);
+}
+.questions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.question {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: start;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border-left: 3px solid var(--color-border-strong);
+  background: var(--color-surface);
+}
+.question .editForm {
+  grid-column: 2 / -1;
+}
+.resolve {
+  display: grid;
+  place-items: center;
+  width: var(--touch-target);
+  height: var(--touch-target);
+  cursor: pointer;
+}
+/* The 44px checkbox and Edit targets are centered on the question's first line
+   (1lh = one line of text), so a long question wraps below them. */
+.question > .resolve,
+.question > .linkButton {
+  margin-block: calc((1lh - var(--touch-target)) / 2);
+}
+.resolve input {
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  accent-color: var(--gray-900);
+}
+.qText {
+  margin: 0;
+}
+
+.linkButton {
+  min-height: var(--touch-target);
+  min-width: var(--touch-target);
+  padding: 0 var(--space-1);
+  border: 0;
+  background: none;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.label {
+  font-weight: 700;
+}
+.textarea,
+.select {
+  min-height: var(--touch-target);
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+}
+.textarea {
+  min-height: 72px;
+  resize: vertical;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-1);
+}
+.contact p {
+  margin: 0;
+}
+.phone {
+  font-size: var(--text-lg);
+}
+
+/* About the child: label above the caregiver's answer (line breaks kept). */
+.about {
+  margin: 0;
+}
+.about div {
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+.about dt {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+.about dd {
+  margin: 0;
+  white-space: pre-line;
+}
+
+/* A section title with a button at the right ("Add a question +"). */
+.sectionHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-2);
+}
+/* The button stays on the title's line; on a narrow phone the title wraps instead. */
+.sectionHead h2 {
+  min-width: 0;
+  margin: 0;
+}
+.headBtn {
+  flex: none;
+  gap: var(--space-1);
+  padding: 0 var(--space-3);
+  white-space: nowrap;
+}
+.headBtn svg {
+  flex: none;
+  width: 16px;
+  height: 16px;
+}
+
+/* A question's text, its answer (if any) and "Add answer" / "Edit answer" below. */
+.qBody {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+}
+.qAnswer {
+  margin: var(--space-1) 0 0;
+  white-space: pre-line;
+}
+.qAnswerLabel {
+  font-weight: 700;
+}
+.answerButton {
+  padding: 0;
+  font-size: var(--text-sm);
+  /* A 44px target, but its text sits just under the question (see Home's .qAnswerButton). */
+  margin-block: calc((1lh - var(--touch-target)) / 2 + var(--space-1)) calc((1lh - var(--touch-target)) / 2);
+}
+/* "Past questions (n)" under the open questions. */
+.pastLink {
+  align-self: flex-start;
+  margin-top: var(--space-2);
+}
+
+/* Past questions (5a): Back above the title. */
+.pastHead {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-1);
+}
+.pastHead h1 {
+  margin: 0;
+}
+.back {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--touch-target);
+  font-weight: 600;
+}

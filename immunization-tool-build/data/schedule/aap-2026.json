@@ -1,0 +1,964 @@
+{
+  "sample": true,
+  "source": {
+    "title": "Recommended Child and Adolescent Immunization Schedule for Ages 18 Years or Younger, United States, 2026",
+    "publisher": "American Academy of Pediatrics",
+    "updated": "2026-09-02",
+    "url": "https://downloads.aap.org/AAP/PDF/AAP-Immunization-Schedule.pdf",
+    "tables": "Table 1 (routine ages), Table 2 (catch-up minimum ages and intervals), Notes (routine vaccination)"
+  },
+  "version": "aap-2026-sample-1",
+  "effectiveDate": "2026-09-02",
+  "rules": {
+    "rangeDoses": "A dose with a window spanning an age range is dueNow from window.start through window.end and becomes overdue at overdueFrom (the first age after the range ends).",
+    "singleAgeDoses": "A dose recommended at a single age (window.start == window.end) becomes overdue 1 month after that age, following Table 2's 'more than 1 month behind' threshold. overdueFrom is precomputed. CLINICAL REVIEW NEEDED.",
+    "noRestart": "A vaccine series does not need to be restarted, regardless of the time that has elapsed between doses (Table 2).",
+    "catchUpThrough": "catchUpThrough is the last age for which Table 1 shows a catch-up (purple) bar. Past it, the dose is no longer recommended and is not shown as overdue.",
+    "relativeDoses": "Some doses are timed from the previous dose (windowRelativeToPrevious). Compute the window from the actual date of the previous received dose; overdue starts at overdueRelativeToPrevious. If the previous dose isn't recorded, show the dose as upcoming with no date."
+  },
+  "series": [
+    {
+      "vaccineId": "hepb",
+      "catchUpThrough": {
+        "value": 18,
+        "unit": "years"
+      },
+      "doses": [
+        {
+          "dose": 1,
+          "label": "Dose 1 (birth)",
+          "window": {
+            "start": {
+              "value": 0,
+              "unit": "days"
+            },
+            "end": {
+              "value": 0,
+              "unit": "days"
+            }
+          },
+          "overdueFrom": {
+            "value": 1,
+            "unit": "months"
+          },
+          "minimumAge": {
+            "value": 0,
+            "unit": "days"
+          },
+          "note": "Within 24 hours of birth if medically stable and birth weight is 2000 g or more."
+        },
+        {
+          "dose": 2,
+          "label": "Dose 2",
+          "window": {
+            "start": {
+              "value": 1,
+              "unit": "months"
+            },
+            "end": {
+              "value": 2,
+              "unit": "months"
+            }
+          },
+          "overdueFrom": {
+            "value": 3,
+            "unit": "months"
+          },
+          "minimumIntervalFromPrevious": {
+            "value": 4,
+            "unit": "weeks"
+          }
+        },
+        {
+          "dose": 3,
+          "label": "Dose 3",
+          "window": {
+            "start": {
+              "value": 6,
+              "unit": "months"
+            },
+            "end": {
+              "value": 18,
+              "unit": "months"
+            }
+          },
+          "overdueFrom": {
+            "value": 19,
+            "unit": "months"
+          },
+          "minimumAge": {
+            "value": 24,
+            "unit": "weeks"
+          },
+          "minimumIntervalFromPrevious": {
+            "value": 8,
+            "unit": "weeks"
+          },
+          "note": "At least 16 weeks after dose 1; minimum age for the final dose is 24 weeks."
+        }
+      ]
+    },
+    {
+      "vaccineId": "rotavirus",
+      "catchUpThrough": null,
+      "seriesVariants": {
+        "RV1": 2,
+        "RV5": 3,
+        "defaultIfUnknown": 3
+      },
+      "doses": [
+        {
+          "dose": 1,
+          "label": "Dose 1",
+          "window": {
+            "start": {
+              "value": 2,
+              "unit": "months"
+            },
+            "end": {
+              "value": 2,
+              "unit": "months"
+            }
+          },
+          "overdueFrom": {
+            "value": 3,
+            "unit": "months"
+          },
+          "minimumAge": {
+            "value": 6,
+            "unit": "weeks"
+          },
+          "maximumAge": {
+            "value": 15,
+            "unit": "weeks"
+          },
+          "note": "Maximum age for the first dose is 14 weeks, 6 days."
+        },
+        {
+          "dose": 2,
+          "label": "Dose 2",
+          "window": {
+            "start": {
+              "value": 4,
+              "unit": "months"
+            },
+            "end": {
+              "value": 4,
+              "unit": "months"
+            }
+          },
+          "overdueFrom": {
+            "value": 5,
+            "unit": "months"
+          },
+          "minimumIntervalFromPrevious": {
+            "value": 4,
+            "unit": "weeks"
+          }
+        },
+        {
+          "dose": 3,
+          "label": "Dose 3",
+          "window": {
+            "start": {
+              "value": 6,
+              "unit": "months"
+            },
+            "end": {
+              "value": 6,
+              "unit": "months"
+            }
+          },
+          "overdueFrom": {
+            "value": 7,
+            "unit": "months"
+          },
+          "minimumIntervalFromPrevious": {
+            "value": 4,
+            "unit": "weeks"
+          },
+          "note": "Only for the 3-dose series (RotaTeq/RV5) or when any dose was RV5 or unknown."
+        }
+      ],
+      "maximumAgeForFinalDose": {
+        "value": 8,
+        "unit": "months"
+      },
+      "note": "Rotavirus doses are not given after 8 months, 0 days, so missed doses past that age are shown as not given, never overdue."
+    },
+    {
+      "vaccineId": "dtap",
+      "catchUpThrough": {
+        "value": 6,
+        "unit": "years"
+      },
+      "doses": [
+        {
+          "dose": 1,
+          "label": "Dose 1",
+          "window": {
+            "start": {
+              "value": 2,
+              "unit": "months"
+            },
+            "end": {
+              "value": 2,
+              "unit": "months"
+            }
+          },
+          "overdueFrom": {
+            "value": 3,
+            "unit": "months"
+          },
+          "minimumAge": {
+            "value": 6,
+            "unit": "weeks"
+          }
+        },
+        {
+          "dose": 2,
+          "label": "Dose 2",
+          "window": {
+            "start": {
+              "value": 4,
+              "unit": "months"
+            },
+            "end": {
+              "value": 4,
+              "unit": "months"
+            }
+          },
+          "overdueFrom": {
+            "value": 5,
+            "unit": "months"
+          },
+          "minimumIntervalFromPrevious": {
+            "value": 4,
+            "unit": "weeks"
+          }
+        },
+        {
+          "dose": 3,
+          "label": "Dose 3",
+          "window": {
+            "start": {
+              "value": 6,
+              "unit": "months"
+            },
+            "end": {
+              "value": 6,
+              "unit": "months"
+            }
+          },
+          "overdueFrom": {
+            "value": 7,
+            "unit": "months"
+          },
+          "minimumIntervalFromPrevious": {
+            "value": 4,
+            "unit": "weeks"
+          }
+        },
+        {
+          "dose": 4,
+          "label": "Dose 4",
+          "window": {
+            "start": {
+              "value": 15,
+              "unit": "months"
+            },
+            "end": {
+              "value": 18,
+              "unit": "months"
+            }
+          },
+          "overdueFrom": {
+            "value": 19,
+            "unit": "months"
+          },
+          "minimumIntervalFromPrevious": {
+            "value": 6,
+            "unit": "months"
+          },
+          "note": "May be given as early as 12 months if at least 6 months after dose 3."
+        },
+        {
+          "dose": 5,
+          "label": "Dose 5",
+          "window": {
+            "start": {
+              "value": 4,
+              "unit": "years"
+            },
+            "end": {
+              "value": 6,
+              "unit": "years"
+            }
+          },
+          "overdueFrom": {
+            "value": 7,
+            "unit": "years"
+          },
+          "minimumIntervalFromPrevious": {
+            "value": 6,
+            "unit": "months"
+          },
+          "note": "Not needed if dose 4 was given at age 4 years or older and at least 6 months after dose 3."
+        }
+      ],
+      "olderChildren": "Children 7 years and older who are behind get Tdap/Td instead (see tdap)."
+    },
+    {
+      "vaccineId": "hib",
+      "catchUpThrough": {
+        "value": 59,
+        "unit": "months"
+      },
+      "doses": [
+        {
+          "dose": 1,
+          "label": "Dose 1",
+          "window": {
+            "start": {
+              "value": 2,
+              "unit": "months"
+            },
+            "end": {
+              "value": 2,
+              "unit": "months"
+            }
+          },
+          "overdueFrom": {
+            "value": 3,
+            "unit": "months"
+          },
+          "minimumAge": {
+            "value": 6,
+            "unit": "weeks"
+          }
+        },
+        {
+          "dose": 2,
+          "label": "Dose 2",
+          "window": {
+            "start": {
+              "value": 4,
+              "unit": "months"
+            },
+            "end": {
+              "value": 4,
+              "unit": "months"
+            }
+          },
+          "overdueFrom": {
+            "value": 5,
+            "unit": "months"
+          },
+          "minimumIntervalFromPrevious": {
+            "value": 4,
+            "unit": "weeks"
+          }
+        },
+        {
+          "dose": 3,
+          "label": "Dose 3",
+          "window": {
+            "start": {
+              "value": 6,
+              "unit": "months"
+            },
+            "end": {
+              "value": 6,
+              "unit": "months"
+            }
+          },
+          "overdueFrom": {
+            "value": 7,
+            "unit": "months"
+          },
+          "minimumIntervalFromPrevious": {
+            "value": 4,
+            "unit": "weeks"
+          },
+          "note": "Depends on the product: needed for ActHIB, Hiberix, Pentacel, Vaxelis; not needed for PedvaxHIB (3-dose series total)."
+        },
+        {
+          "dose": 4,
+          "label": "Booster (3rd or 4th dose)",
+          "window": {
+            "start": {
+              "value": 12,
+              "unit": "months"
+            },
+            "end": {
+              "value": 15,
+              "unit": "months"
+            }
+          },
+          "overdueFrom": {
+            "value": 16,
+            "unit": "months"
+          },
+          "minimumIntervalFromPrevious": {
+            "value": 8,
+            "unit": "weeks"
+          },
+          "note": "Booster at 12–15 months; Vaxelis is not used as the booster."
+        }
+      ]
+    },
+    {
+      "vaccineId": "pcv",
+      "catchUpThrough": {
+        "value": 59,
+        "unit": "months"
+      },
+      "doses": [
+        {
+          "dose": 1,
+          "label": "Dose 1",
+          "window": {
+            "start": {
+              "value": 2,
+              "unit": "months"
+            },
+            "end": {
+              "value": 2,
+              "unit": "months"
+            }
+          },
+          "overdueFrom": {
+            "value": 3,
+            "unit": "months"
+          },
+          "minimumAge": {
+            "value": 6,
+            "unit": "weeks"
+          }
+        },
+        {
+          "dose": 2,
+          "label": "Dose 2",
+          "window": {
+            "start": {
+              "value": 4,
+              "unit": "months"
+            },
+            "end": {
+              "value": 4,
+              "unit": "months"
+            }
+          },
+          "overdueFrom": {
+            "value": 5,
+            "unit": "months"
+          },
+          "minimumIntervalFromPrevious": {
+            "value": 4,
+            "unit": "weeks"
+          }
+        },
+        {
+          "dose": 3,
+          "label": "Dose 3",
+          "window": {
+            "start": {
+              "value": 6,
+              "unit": "months"
+            },
+            "end": {
+              "value": 6,
+              "unit": "months"
+            }
+          },
+          "overdueFrom": {
+            "value": 7,
+            "unit": "months"
+          },
+          "minimumIntervalFromPrevious": {
+            "value": 4,
+            "unit": "weeks"
+          }
+        },
+        {
+          "dose": 4,
+          "label": "Dose 4",
+          "window": {
+            "start": {
+              "value": 12,
+              "unit": "months"
+            },
+            "end": {
+              "value": 15,
+              "unit": "months"
+            }
+          },
+          "overdueFrom": {
+            "value": 16,
+            "unit": "months"
+          },
+          "minimumIntervalFromPrevious": {
+            "value": 8,
+            "unit": "weeks"
+          }
+        }
+      ],
+      "note": "Healthy children 2–4 years with an incomplete series need 1 dose."
+    },
+    {
+      "vaccineId": "ipv",
+      "catchUpThrough": {
+        "value": 18,
+        "unit": "years"
+      },
+      "doses": [
+        {
+          "dose": 1,
+          "label": "Dose 1",
+          "window": {
+            "start": {
+              "value": 2,
+              "unit": "months"
+            },
+            "end": {
+              "value": 2,
+              "unit": "months"
+            }
+          },
+          "overdueFrom": {
+            "value": 3,
+            "unit": "months"
+          },
+          "minimumAge": {
+            "value": 6,
+            "unit": "weeks"
+          }
+        },
+        {
+          "dose": 2,
+          "label": "Dose 2",
+          "window": {
+            "start": {
+              "value": 4,
+              "unit": "months"
+            },
+            "end": {
+              "value": 4,
+              "unit": "months"
+            }
+          },
+          "overdueFrom": {
+            "value": 5,
+            "unit": "months"
+          },
+          "minimumIntervalFromPrevious": {
+            "value": 4,
+            "unit": "weeks"
+          }
+        },
+        {
+          "dose": 3,
+          "label": "Dose 3",
+          "window": {
+            "start": {
+              "value": 6,
+              "unit": "months"
+            },
+            "end": {
+              "value": 18,
+              "unit": "months"
+            }
+          },
+          "overdueFrom": {
+            "value": 19,
+            "unit": "months"
+          },
+          "minimumIntervalFromPrevious": {
+            "value": 4,
+            "unit": "weeks"
+          }
+        },
+        {
+          "dose": 4,
+          "label": "Dose 4",
+          "window": {
+            "start": {
+              "value": 4,
+              "unit": "years"
+            },
+            "end": {
+              "value": 6,
+              "unit": "years"
+            }
+          },
+          "overdueFrom": {
+            "value": 7,
+            "unit": "years"
+          },
+          "minimumAge": {
+            "value": 4,
+            "unit": "years"
+          },
+          "minimumIntervalFromPrevious": {
+            "value": 6,
+            "unit": "months"
+          },
+          "note": "Final dose on or after age 4 years and at least 6 months after the previous dose."
+        }
+      ]
+    },
+    {
+      "vaccineId": "mmr",
+      "catchUpThrough": {
+        "value": 18,
+        "unit": "years"
+      },
+      "doses": [
+        {
+          "dose": 1,
+          "label": "Dose 1",
+          "window": {
+            "start": {
+              "value": 12,
+              "unit": "months"
+            },
+            "end": {
+              "value": 15,
+              "unit": "months"
+            }
+          },
+          "overdueFrom": {
+            "value": 16,
+            "unit": "months"
+          },
+          "minimumAge": {
+            "value": 12,
+            "unit": "months"
+          },
+          "note": "Infants 6–11 months may get an early dose before international travel or in an outbreak; it doesn't count toward the series."
+        },
+        {
+          "dose": 2,
+          "label": "Dose 2",
+          "window": {
+            "start": {
+              "value": 4,
+              "unit": "years"
+            },
+            "end": {
+              "value": 6,
+              "unit": "years"
+            }
+          },
+          "overdueFrom": {
+            "value": 7,
+            "unit": "years"
+          },
+          "minimumIntervalFromPrevious": {
+            "value": 4,
+            "unit": "weeks"
+          }
+        }
+      ]
+    },
+    {
+      "vaccineId": "varicella",
+      "catchUpThrough": {
+        "value": 18,
+        "unit": "years"
+      },
+      "doses": [
+        {
+          "dose": 1,
+          "label": "Dose 1",
+          "window": {
+            "start": {
+              "value": 12,
+              "unit": "months"
+            },
+            "end": {
+              "value": 15,
+              "unit": "months"
+            }
+          },
+          "overdueFrom": {
+            "value": 16,
+            "unit": "months"
+          },
+          "minimumAge": {
+            "value": 12,
+            "unit": "months"
+          }
+        },
+        {
+          "dose": 2,
+          "label": "Dose 2",
+          "window": {
+            "start": {
+              "value": 4,
+              "unit": "years"
+            },
+            "end": {
+              "value": 6,
+              "unit": "years"
+            }
+          },
+          "overdueFrom": {
+            "value": 7,
+            "unit": "years"
+          },
+          "minimumIntervalFromPrevious": {
+            "value": 3,
+            "unit": "months"
+          },
+          "note": "May be given as early as 3 months after dose 1."
+        }
+      ]
+    },
+    {
+      "vaccineId": "hepa",
+      "catchUpThrough": {
+        "value": 18,
+        "unit": "years"
+      },
+      "doses": [
+        {
+          "dose": 1,
+          "label": "Dose 1",
+          "window": {
+            "start": {
+              "value": 12,
+              "unit": "months"
+            },
+            "end": {
+              "value": 23,
+              "unit": "months"
+            }
+          },
+          "overdueFrom": {
+            "value": 24,
+            "unit": "months"
+          },
+          "minimumAge": {
+            "value": 12,
+            "unit": "months"
+          }
+        },
+        {
+          "dose": 2,
+          "label": "Dose 2",
+          "window": {
+            "start": {
+              "value": 18,
+              "unit": "months"
+            },
+            "end": {
+              "value": 23,
+              "unit": "months"
+            }
+          },
+          "overdueFrom": {
+            "value": 24,
+            "unit": "months"
+          },
+          "minimumIntervalFromPrevious": {
+            "value": 6,
+            "unit": "months"
+          },
+          "note": "At least 6 months after dose 1; 2-dose series at age 12–23 months."
+        }
+      ]
+    },
+    {
+      "vaccineId": "tdap",
+      "catchUpThrough": {
+        "value": 18,
+        "unit": "years"
+      },
+      "doses": [
+        {
+          "dose": 1,
+          "label": "Adolescent booster",
+          "window": {
+            "start": {
+              "value": 11,
+              "unit": "years"
+            },
+            "end": {
+              "value": 12,
+              "unit": "years"
+            }
+          },
+          "overdueFrom": {
+            "value": 13,
+            "unit": "years"
+          },
+          "minimumAge": {
+            "value": 7,
+            "unit": "years"
+          }
+        }
+      ]
+    },
+    {
+      "vaccineId": "hpv",
+      "catchUpThrough": {
+        "value": 18,
+        "unit": "years"
+      },
+      "doses": [
+        {
+          "dose": 1,
+          "label": "Dose 1",
+          "window": {
+            "start": {
+              "value": 9,
+              "unit": "years"
+            },
+            "end": {
+              "value": 12,
+              "unit": "years"
+            }
+          },
+          "overdueFrom": {
+            "value": 13,
+            "unit": "years"
+          },
+          "minimumAge": {
+            "value": 9,
+            "unit": "years"
+          },
+          "note": "AAP recommends starting between ages 9 and 12."
+        },
+        {
+          "dose": 2,
+          "label": "Dose 2",
+          "window": null,
+          "overdueFrom": null,
+          "minimumIntervalFromPrevious": {
+            "value": 5,
+            "unit": "months"
+          },
+          "note": "6–12 months after dose 1 when started at 9–14 years. A 3-dose series is needed if started at 15 or older.",
+          "windowRelativeToPrevious": {
+            "start": {
+              "value": 6,
+              "unit": "months"
+            },
+            "end": {
+              "value": 12,
+              "unit": "months"
+            }
+          },
+          "overdueRelativeToPrevious": {
+            "value": 13,
+            "unit": "months"
+          }
+        }
+      ]
+    },
+    {
+      "vaccineId": "menacwy",
+      "catchUpThrough": {
+        "value": 18,
+        "unit": "years"
+      },
+      "doses": [
+        {
+          "dose": 1,
+          "label": "Dose 1",
+          "window": {
+            "start": {
+              "value": 11,
+              "unit": "years"
+            },
+            "end": {
+              "value": 12,
+              "unit": "years"
+            }
+          },
+          "overdueFrom": {
+            "value": 13,
+            "unit": "years"
+          },
+          "minimumAge": {
+            "value": 6,
+            "unit": "weeks"
+          }
+        },
+        {
+          "dose": 2,
+          "label": "Booster",
+          "window": {
+            "start": {
+              "value": 16,
+              "unit": "years"
+            },
+            "end": {
+              "value": 16,
+              "unit": "years"
+            }
+          },
+          "overdueFrom": {
+            "value": 17,
+            "unit": "years"
+          },
+          "minimumIntervalFromPrevious": {
+            "value": 8,
+            "unit": "weeks"
+          }
+        }
+      ]
+    }
+  ],
+  "annual": [
+    {
+      "vaccineId": "influenza",
+      "startAge": {
+        "value": 6,
+        "unit": "months"
+      },
+      "season": {
+        "startMonth": 8,
+        "endMonth": 5
+      },
+      "rule": "Every year from 6 months. Children 6 months–8 years who have had fewer than 2 flu doses before July 1 of the season (or unknown history) need 2 doses at least 4 weeks apart; everyone else needs 1 dose.",
+      "overdue": "Never shown as overdue; shown as 'Due this season' during the season."
+    },
+    {
+      "vaccineId": "covid19",
+      "startAge": {
+        "value": 6,
+        "unit": "months"
+      },
+      "routineThrough": {
+        "value": 23,
+        "unit": "months"
+      },
+      "rule": "1 or more doses of the 2026–2027 vaccine for ages 6–23 months. Ages 2–18: for certain high-risk groups and for those who want protection (see Notes).",
+      "overdue": "Never shown as overdue."
+    }
+  ],
+  "conditional": [
+    {
+      "vaccineId": "rsv-mab",
+      "rule": "1 dose during RSV season for infants under 8 months, depending on the pregnant parent's RSV vaccination status; 1 dose of nirsevimab in a second season (8–19 months) for certain high-risk children.",
+      "appShows": "A prompt to ask the pediatrician, never a due/overdue status."
+    },
+    {
+      "vaccineId": "menb",
+      "rule": "Ages 16–18 years based on shared clinical decision-making; certain high-risk groups from age 10.",
+      "appShows": "'Talk with your pediatrician' at 16, never overdue."
+    },
+    {
+      "vaccineId": "dengue",
+      "rule": "Ages 9–16 living in areas with endemic dengue with lab-confirmed prior infection.",
+      "appShows": "Not shown unless added as a dose."
+    },
+    {
+      "vaccineId": "mpox",
+      "rule": "Certain high-risk adolescents.",
+      "appShows": "Not shown unless added as a dose."
+    }
+  ]
+}

@@ -1,0 +1,408 @@
+/* Screen 1 · Home — grayscale wireframe, mobile first. */
+.screen {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6); /* between sections */
+}
+/* A section: its title and content, closer together. */
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.notices {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.notices:empty {
+  display: none; /* both closed: no extra gap */
+}
+.screen h1 {
+  margin: 0;
+}
+
+.alert {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-2) var(--space-3) var(--space-4);
+  border-left: 4px solid var(--color-border-strong);
+  background: var(--color-banner);
+  border-radius: var(--radius-sm);
+}
+.alert p {
+  flex: 1;
+  margin: 0;
+  padding-top: var(--space-2);
+}
+.close {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: var(--touch-target);
+  height: var(--touch-target);
+  margin: calc(-1 * var(--space-1)) 0;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: none;
+  color: var(--color-text);
+  cursor: pointer;
+}
+.close:hover {
+  background: var(--gray-200);
+}
+.close svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Open Questions, by child */
+.openQuestions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.openQuestions h2 {
+  margin: 0;
+}
+.qGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+.qChild {
+  margin: 0;
+  font-size: var(--text-md);
+}
+.qList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* Same treatment as Visit Prep's questions: a shaded row with a strong left edge. */
+.question {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-3);
+  border-left: 3px solid var(--color-border-strong);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  background: var(--color-surface);
+}
+/* The checkbox and question text: tapping anywhere on them checks it off. */
+.qLabel {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  cursor: pointer;
+}
+.qLabel input {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  margin: 1px 0 0;
+  accent-color: var(--gray-900);
+  cursor: pointer;
+}
+.qBody {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.qVaccine {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-text-muted);
+}
+.qResolved {
+  border-left-color: var(--color-border);
+}
+.qResolved .qText {
+  text-decoration: line-through;
+  color: var(--color-text-muted);
+}
+.qError {
+  margin: 0;
+  font-weight: 600;
+}
+.qNone {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+.qLink {
+  align-self: flex-start;
+}
+/* The answer and "Add answer" sit under the question text (past the checkbox). */
+.qAnswerArea,
+.qAnswerForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: calc(22px + var(--space-3));
+}
+.qAnswerForm {
+  align-items: stretch;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+.qAnswer {
+  margin: 0;
+  white-space: pre-line;
+}
+.qAnswerLabel {
+  font-weight: 700;
+}
+.qAnswerButton {
+  min-height: var(--touch-target);
+  /* A 44px target, but its text sits just under the question: the extra height
+     overlaps the space around it instead of pushing the link down. */
+  margin-block: calc((1lh - var(--touch-target)) / 2 + var(--space-1)) calc((1lh - var(--touch-target)) / 2);
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--color-text);
+  font: inherit;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.qAnswerButtons {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-4);
+  padding-right: calc(var(--space-4) + 24px);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+  text-decoration: none;
+}
+.card:has(.cardLink:hover) {
+  background: var(--color-surface);
+}
+/* Focus shows on the whole card. */
+.card:has(.cardLink:focus-visible) {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
+.cardLink {
+  text-decoration: none;
+}
+.cardLink:focus-visible {
+  outline: none;
+}
+.cardLink::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-md);
+}
+.cardHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+.cardName {
+  margin: 0;
+  font-size: var(--text-lg);
+  font-weight: 700;
+}
+.next {
+  margin-top: var(--space-2);
+}
+.nextTitle {
+  font-weight: 700;
+  font-size: var(--text-sm);
+}
+.nextList {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: var(--space-1) 0 0;
+  padding: 0;
+  list-style: none;
+}
+.nextList li {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+}
+.vaccine {
+  font-weight: 600;
+}
+.window {
+  color: var(--color-text-muted);
+}
+.more {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+.needsInfo {
+  margin-top: var(--space-2);
+}
+.chevron {
+  position: absolute;
+  right: var(--space-3);
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  transform: translateY(-50%);
+}
+
+
+.empty {
+  padding: var(--space-5);
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+/* ---------- Quick actions: Record +, Appointment +, Question + ---------- */
+.quick {
+  /* Mobile: Add Record on its own line, Appointment and Question side by side. */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2);
+}
+.quickBtn {
+  gap: var(--space-1);
+  padding: 0 var(--space-3);
+  white-space: nowrap;
+}
+.quickBtn:first-child {
+  grid-column: 1 / -1;
+}
+@media (min-width: 768px) {
+  .quick {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .quickBtn:first-child {
+    grid-column: auto;
+  }
+}
+.quickBtn svg {
+  flex: none;
+  width: 16px;
+  height: 16px;
+}
+
+/* ---------- Popup fields ---------- */
+.pickList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.pickList ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.pickPrompt,
+.fieldLabel {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+}
+.choiceSet {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.choiceSet legend {
+  margin-bottom: var(--space-2);
+}
+.choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+.choice {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--touch-target);
+  padding: 0 var(--space-4) 0 var(--space-3);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+}
+.choice:has(input:checked) {
+  border-width: 2px;
+  border-color: var(--gray-900);
+  background: var(--gray-100);
+  font-weight: 700;
+}
+.choice input {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  accent-color: var(--gray-900);
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.select,
+.textarea {
+  min-height: var(--touch-target);
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font: inherit;
+}
+.textarea {
+  min-height: 96px;
+  resize: vertical;
+}
+.fieldError {
+  display: flex;
+  gap: var(--space-2);
+  margin: var(--space-2) 0 0;
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+.fieldError svg {
+  flex: none;
+  width: 18px;
+  height: 18px;
+}
+.formError {
+  margin: 0;
+  padding: var(--space-3);
+  border: 2px solid var(--gray-900);
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+}

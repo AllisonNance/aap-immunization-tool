@@ -1,0 +1,113 @@
+/* Screen 0 · Log in — card on a muted backdrop, grayscale (no black). */
+
+.backdrop {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: var(--space-6);
+}
+
+/* Muted page behind the card, edge to edge. LoginScreen sets the attribute
+   only while it's shown (its effect is cleaned up when Next hides the page). */
+:global(body[data-backdrop='muted']) {
+  background: var(--gray-200);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  width: 100%;
+  max-width: 560px;
+  padding: var(--space-6) var(--space-5) var(--space-5);
+  background: var(--gray-0);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.title {
+  margin: 0 0 var(--space-2);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.labelRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-2);
+}
+.label {
+  font-weight: 700;
+}
+.required {
+  font-size: var(--text-sm);
+  color: var(--gray-700);
+}
+.input {
+  min-height: var(--touch-target);
+  padding: 0 var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--gray-100);
+}
+.input[aria-invalid='true'] {
+  border: 2px solid var(--gray-900);
+}
+.fieldError {
+  display: flex;
+  gap: var(--space-2);
+  align-items: flex-start;
+  margin: 0;
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+.fieldError svg {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+}
+.formError {
+  margin: 0;
+  padding: var(--space-3);
+  border: 2px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+}
+
+/* Pill button, like the reference. */
+.continue {
+  min-height: var(--touch-target);
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  font-weight: 700;
+  cursor: pointer;
+}
+.continue:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.register {
+  margin: 0;
+  text-align: center;
+}
+.registerLink {
+  min-height: var(--touch-target);
+  padding: 0 var(--space-1);
+  border: 0;
+  background: none;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}

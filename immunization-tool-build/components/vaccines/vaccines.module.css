@@ -1,0 +1,201 @@
+/* Screens 6 and 6a — grayscale wireframe. */
+.screen {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6); /* between sections */
+}
+.screen h1 {
+  margin: 0;
+}
+.h2 {
+  margin: 0 0 var(--space-2);
+  font-size: var(--text-lg);
+}
+.lede {
+  margin: var(--space-2) 0 0;
+}
+.muted {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+.back {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--touch-target);
+  font-weight: 600;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+.label {
+  font-weight: 700;
+}
+.input,
+.textarea {
+  min-height: var(--touch-target);
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+}
+.textarea {
+  min-height: 88px;
+  resize: vertical;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--color-border);
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  min-height: 56px;
+  padding: var(--space-2) var(--space-1);
+  border-bottom: 1px solid var(--color-border);
+  text-decoration: none;
+}
+.row:hover {
+  background: var(--color-surface);
+}
+.rowText {
+  display: flex;
+  flex-direction: column;
+}
+.rowTitle {
+  font-weight: 700;
+}
+.rowSub {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+.chevron {
+  flex: none;
+  width: 20px;
+  height: 20px;
+}
+.section p {
+  margin: 0;
+}
+.doseTable {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin: var(--space-3) 0 0;
+  padding: 0;
+  list-style: none;
+}
+.doseTable li {
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  gap: 0 var(--space-2);
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+.doseTable li > :nth-child(3) {
+  grid-column: 2;
+}
+.links {
+  margin: 0 0 var(--space-2);
+  padding-left: var(--space-5);
+}
+.links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--touch-target);
+  font-weight: 600;
+}
+
+.childModule {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 2px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+.childModule .h2 {
+  margin: 0;
+}
+.childDoses {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.doseRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  min-height: var(--touch-target);
+  padding: 0 var(--space-2);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+  text-decoration: none;
+}
+.moduleActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+/* Same as Home's quick action buttons ("Add Record +"). */
+.actionBtn {
+  gap: var(--space-1);
+  padding: 0 var(--space-3);
+  white-space: nowrap;
+}
+.actionBtn svg {
+  flex: none;
+  width: 16px;
+  height: 16px;
+}
+
+/* Vaccines & Guides (6): title, then Vaccines / Guides tabs (same style as the child page's). */
+.top {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.top h1 {
+  margin: 0;
+}
+.tabs {
+  display: flex;
+  border-bottom: 1px solid var(--color-border);
+}
+.tab {
+  min-height: var(--touch-target);
+  padding: 0 var(--space-4);
+  border: 0;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -1px;
+  background: none;
+  color: var(--color-text-muted);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.tab[aria-selected='true'] {
+  border-bottom-color: var(--gray-900);
+  color: var(--color-text);
+  font-weight: 700;
+}
+.tab:hover {
+  color: var(--color-text);
+}
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
